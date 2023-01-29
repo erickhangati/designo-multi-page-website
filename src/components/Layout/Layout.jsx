@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 import styles from "./Layout.module.scss";
+import ScrollToTopIcon from "./ScrollToTopIcon";
 
 const Layout = () => {
   const { pathname } = useLocation();
 
+  // SROLL TO THE TOP ICON CLICK HANDLER
+  const scrollToTopHandler = useCallback(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // SCROLL TO TOP WHEN LINKING TO DIFFERENT ROUTE
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    scrollToTopHandler();
+  }, [pathname, scrollToTopHandler]);
 
   return (
     <div className={styles.layout}>
@@ -26,6 +32,9 @@ const Layout = () => {
 
       {/* RENDER FOOTER */}
       <Footer />
+
+      {/* RENDER SCROLL TO TOP ICON */}
+      <ScrollToTopIcon onClick={scrollToTopHandler} />
     </div>
   );
 };

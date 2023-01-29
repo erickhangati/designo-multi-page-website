@@ -1,0 +1,14 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.scroll-to-top-icon {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+
+  &:hover {
+    fill: var(--light-peach);
+  }
+}
