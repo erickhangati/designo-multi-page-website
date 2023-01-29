@@ -1,0 +1,63 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.footer {
+  padding: 14.4rem 11.46% 7.2rem 11.46%;
+  background-color: var(--black);
+  margin-top: 36rem;
+
+  @include mixins.respond(desktop-md) {
+    padding: 16.6rem 7.1% 8rem 7.1%;
+  }
+
+  @include mixins.respond(laptop-md) {
+    padding: 10.6rem 7.1% 8rem 7.1%;
+  }
+
+  @include mixins.respond(tablet) {
+    padding: 10.6rem 4rem 8rem 4rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: 10.6rem 6.4% 6.4rem 6.4%;
+  }
+
+  & hr {
+    display: none;
+
+    @include mixins.respond(tablet-md) {
+      display: block;
+      width: 100%;
+      border: none;
+      height: 1px;
+      background-color: #979797;
+    }
+  }
+
+  & a {
+    line-height: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #979797;
+
+    @include mixins.respond(tablet-md) {
+      border: 0;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+  }
+
+  &__menus {
+    color: var(--white);
+
+    @include mixins.respond(tablet-md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

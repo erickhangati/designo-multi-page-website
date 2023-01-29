@@ -1,0 +1,17 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.world-class-target {
+  margin-top: 16rem;
+
+  @include mixins.respond(tablet) {
+    margin-top: 12rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    margin-top: unset;
+  }
+
+  & h2 {
+    color: var(--peach);
+  }
+}

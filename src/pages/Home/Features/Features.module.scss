@@ -1,0 +1,23 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.features {
+  margin-top: 16rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+
+  @include mixins.respond(laptop-md) {
+    margin-top: 12rem;
+    grid-template-columns: 1fr;
+  }
+
+  @include mixins.respond(tablet-sm) {
+    padding: 0 4rem;
+    row-gap: 8rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: 0 2.4rem;
+  }
+}

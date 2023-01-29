@@ -1,0 +1,39 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.real-deal {
+  margin-top: 16rem;
+
+  @include mixins.respond(tablet) {
+    margin-top: 12rem;
+  }
+
+  & picture {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @include mixins.respond(tablet) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  & h2 {
+    color: var(--peach);
+  }
+
+  &__card {
+    grid-template-columns: 1fr 42.88%;
+
+    @include mixins.respond(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__description {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @include mixins.respond(tablet) {
+      grid-row: 2 / 3;
+    }
+  }
+}

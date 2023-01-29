@@ -1,0 +1,25 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.heading {
+  padding: 6.4rem 19rem;
+  text-align: center;
+  color: var(--white);
+  min-height: 25.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @include mixins.respond(tablet) {
+    padding: 10.5rem 4rem;
+  }
+
+  @include mixins.respond(tablet-sm) {
+    border-radius: 0;
+    padding: 10.5rem 2.4rem;
+  }
+
+  & h2 {
+    font-size: 4.8rem;
+  }
+}

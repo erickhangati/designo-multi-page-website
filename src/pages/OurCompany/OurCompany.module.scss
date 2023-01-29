@@ -1,0 +1,26 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.our-company {
+  @include mixins.respond(tablet-sm) {
+    padding: 0 4rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: unset;
+  }
+
+  &__hero {
+    & picture {
+      @include mixins.respond(tablet) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+    }
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

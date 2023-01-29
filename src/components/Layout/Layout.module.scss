@@ -1,0 +1,22 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.layout {
+  & main {
+    width: 77.08%;
+    margin: 0 auto;
+
+    @include mixins.respond(desktop-md) {
+      width: 100%;
+      padding: 0 7.1%;
+    }
+
+    @include mixins.respond(tablet) {
+      padding: 0 4rem;
+    }
+
+    @include mixins.respond(tablet-sm) {
+      width: 100%;
+      padding: 0 0;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@use "../../../../styles/mixins.scss" as mixins;
+
+.location-item {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+
+  @include mixins.respond(laptop-md) {
+    gap: 3.6rem;
+  }
+
+  @include mixins.respond(tablet) {
+    gap: 4.8rem;
+  }
+
+  & svg {
+    @include mixins.respond(laptop-md) {
+      width: 18rem;
+    }
+
+    @include mixins.respond(tablet) {
+      width: 20.2rem;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+
+    & h2 {
+      font-size: 2rem;
+      line-height: 2.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+
+      @include mixins.respond(laptop-md) {
+        font-size: 1.4rem;
+      }
+
+      @include mixins.respond(tablet) {
+        font-size: 2rem;
+      }
+    }
+
+    & a {
+      padding: 1.8rem 2.4rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: var(--white);
+      border-radius: 0.8rem;
+      background-color: var(--peach);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--light-peach);
+        color: var(--white);
+      }
+    }
+  }
+}

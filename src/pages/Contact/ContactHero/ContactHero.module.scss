@@ -1,0 +1,17 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.contact-hero {
+  @include mixins.respond(tablet-sm) {
+    padding: 0 4rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: 0;
+  }
+
+  & div {
+    @include mixins.respond(tablet) {
+      text-align: left;
+    }
+  }
+}

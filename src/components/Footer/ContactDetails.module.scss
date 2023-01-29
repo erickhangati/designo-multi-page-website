@@ -1,0 +1,45 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.contact-details {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: 18rem 20rem 1fr;
+  column-gap: 6rem;
+  color: #979797;
+
+  @include mixins.respond(laptop-md) {
+    column-gap: 3rem;
+  }
+
+  @include mixins.respond(tablet) {
+    column-gap: 2rem;
+  }
+
+  @include mixins.respond(tablet-md) {
+    padding-top: unset;
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    justify-items: center;
+  }
+
+  & h2 {
+    font-size: 1.6rem;
+    letter-spacing: 0;
+  }
+
+  &__icons {
+    margin-left: auto;
+    align-self: end;
+
+    @include mixins.respond(tablet-md) {
+      margin-top: 2rem;
+      margin-left: unset;
+    }
+  }
+
+  &__contacts {
+    @include mixins.respond(tablet-md) {
+      text-align: center;
+    }
+  }
+}

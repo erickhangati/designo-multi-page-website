@@ -1,0 +1,28 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.menus {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 4.2rem;
+
+  @include mixins.respond(tablet-md) {
+    display: none;
+  }
+
+  & a {
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    line-height: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.related-portfolio {
+  margin-top: 16rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30.8rem;
+  column-gap: 3rem;
+
+  @include mixins.respond(tablet) {
+    margin-top: 12rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 20rem);
+    row-gap: 2.4rem;
+  }
+
+  @include mixins.respond(tablet-sm) {
+    padding: 0 4rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: 0 2.4rem;
+  }
+}
+
+.web-design {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/src/pages/Home/Portfolio/images/webDesign/image-web-design-large.jpg");
+  transition: all 0.3s;
+
+  &:hover {
+    background-image: linear-gradient(
+        rgba(231, 130, 107, 0.6),
+        rgba(231, 130, 107, 0.6)
+      ),
+      url("/src/pages/Home/Portfolio/images/webDesign/image-web-design-large.jpg");
+  }
+}
+
+.app-design {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/src/pages/Home/Portfolio/images/appDesign/image-app-design.jpg");
+
+  &:hover {
+    background-image: linear-gradient(
+        rgba(231, 130, 107, 0.6),
+        rgba(231, 130, 107, 0.6)
+      ),
+      url("/src/pages/Home/Portfolio/images/appDesign/image-app-design.jpg");
+  }
+}
+
+.graphic-design {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/src/pages/Home/Portfolio/images/graphicDesign/image-graphic-design.jpg");
+
+  &:hover {
+    background-image: linear-gradient(
+        rgba(231, 130, 107, 0.6),
+        rgba(231, 130, 107, 0.6)
+      ),
+      url("/src/pages/Home/Portfolio/images/graphicDesign/image-graphic-design.jpg");
+  }
+}

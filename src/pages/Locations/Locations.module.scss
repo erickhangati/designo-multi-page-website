@@ -1,0 +1,15 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  @include mixins.respond(tablet) {
+    gap: 12rem;
+  }
+
+  @include mixins.respond(tablet-sm) {
+    gap: 4rem;
+  }
+}

@@ -1,0 +1,16 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.locations {
+  margin-top: 16rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+
+  @include mixins.respond(tablet) {
+    margin-top: 12rem;
+
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+}

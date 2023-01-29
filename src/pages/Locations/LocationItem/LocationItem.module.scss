@@ -1,0 +1,108 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.location-item {
+  display: flex;
+  gap: 3rem;
+
+  &.even {
+    flex-direction: row-reverse;
+  }
+
+  @include mixins.respond(tablet) {
+    flex-direction: column-reverse;
+    gap: 2.4rem;
+
+    &.even {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @include mixins.respond(tablet-sm) {
+    gap: unset;
+  }
+
+  &__details {
+    width: 65.77%;
+    padding: 8.8rem 9.5rem;
+    border-radius: 1.2rem;
+    background-color: #fdf3f0;
+    background-image: url("/src/pages/Locations/LocationItem/background-circle-locations.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 2.4rem;
+
+    @include mixins.respond(desktop) {
+      padding: 6.8rem 5.5rem;
+    }
+
+    @include mixins.respond(laptop-md) {
+      padding: 4.8rem 2.8rem;
+    }
+
+    @include mixins.respond(tablet) {
+      width: 100%;
+      padding: 8.8rem 7.5rem;
+    }
+
+    @include mixins.respond(tablet-sm) {
+      border-radius: unset;
+      padding: 8rem 4rem;
+    }
+
+    @include mixins.respond(phone-lg) {
+      text-align: center;
+      grid-template-columns: 1fr;
+      padding: 8rem 2.4rem;
+    }
+
+    & h2 {
+      color: var(--peach);
+      grid-column: 1 / -1;
+
+      @include mixins.respond(phone-lg) {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+      }
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+
+    & h3 {
+      font-size: 1.6rem;
+      letter-spacing: unset;
+    }
+  }
+
+  &__map {
+    width: calc(100% - 65.77% - 3rem);
+    background-color: var(--light-peach);
+    border-radius: 1.2rem;
+
+    @include mixins.respond(tablet) {
+      width: 100%;
+      height: 32.6rem;
+    }
+
+    @include mixins.respond(tablet-sm) {
+      border-radius: unset;
+      height: 32rem;
+    }
+
+    & h2 {
+      font-size: 1.4rem;
+      letter-spacing: unset;
+      font-weight: 500;
+    }
+
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+}

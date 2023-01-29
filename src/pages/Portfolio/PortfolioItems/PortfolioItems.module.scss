@@ -1,0 +1,26 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.portfolio-items {
+  margin-top: 16rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 3.2rem;
+
+  @include mixins.respond(laptop-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mixins.respond(tablet) {
+    margin-top: 12rem;
+    grid-template-columns: 1fr;
+  }
+
+  @include mixins.respond(tablet-sm) {
+    padding: 0 4rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: 0 2.4rem;
+  }
+}

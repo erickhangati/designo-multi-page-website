@@ -1,0 +1,66 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.hero {
+  width: 100%;
+  border-radius: 1.4rem;
+  min-height: 48rem;
+  background-color: var(--peach);
+  background-image: url("/src/components/UI/Hero/bg-pattern-hero-about-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 57.12%;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 42.88%;
+
+  @include mixins.respond(tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 32rem 1fr;
+    background-size: unset;
+    background-position: -17rem -10rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    border-radius: unset;
+  }
+
+  &__description {
+    width: 100%;
+    padding: 13.5rem 9.5rem;
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    justify-content: center;
+
+    @include mixins.respond(desktop) {
+      padding: 9.5rem 6.5rem;
+    }
+
+    @include mixins.respond(laptop-md) {
+      padding: 7.5rem 6rem;
+    }
+
+    @include mixins.respond(tablet) {
+      padding: 6.4rem 5.8rem;
+      text-align: center;
+    }
+
+    @include mixins.respond(tablet) {
+      padding: 6.4rem 3.6rem;
+    }
+
+    @include mixins.respond(phone-lg) {
+      padding: 8rem 2.4rem;
+    }
+
+    & h1 {
+      @include mixins.respond(phone-lg) {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+      }
+    }
+  }
+}

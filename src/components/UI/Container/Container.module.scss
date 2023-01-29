@@ -1,0 +1,25 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.container {
+  width: 100%;
+  padding: 7.2rem 9.5rem;
+  background-color: var(--peach);
+  background-image: linear-gradient(to right, var(--peach), transparent),
+    url("/src/components/Footer/CTA/pattern-3-circles.svg"),
+    url("/src/components/Footer/CTA/pattern-2-circles.svg");
+  background-position: left, bottom right, top right;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  border-radius: 1.5rem;
+
+  @include mixins.respond(laptop-md) {
+    padding: 7.2rem 6rem;
+  }
+
+  @include mixins.respond(tablet) {
+    padding: 5.6rem 6rem;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: 6.4rem 2.4rem;
+  }
+}

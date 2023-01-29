@@ -1,0 +1,20 @@
+@use "../../../../styles/mixins.scss" as mixins;
+
+.pattern-1 {
+  left: 0;
+  top: 47.5rem;
+
+  @include mixins.respond(tablet) {
+    display: none;
+  }
+}
+
+.pattern-2 {
+  left: unset;
+  right: 0;
+  top: 184.7rem;
+
+  @include mixins.respond(tablet) {
+    display: none;
+  }
+}
