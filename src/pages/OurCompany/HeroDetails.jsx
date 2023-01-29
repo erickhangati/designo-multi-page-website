@@ -1,5 +1,9 @@
 import React from "react";
 
+import heroImgDesktop from "./images/desktop/image-about-hero.jpg";
+import heroImgTablet from "./images/tablet/image-about-hero.jpg";
+import heroImgPhone from "./images/phone/image-about-hero.jpg";
+
 // HERO DETAILS
 export const HeroDetailsText = {
   title: "About Us",
@@ -10,25 +14,10 @@ export const HeroDetailsText = {
 const HeroDetails = () => {
   return (
     <picture>
-      <source
-        srcSet="/src/pages/OurCompany/images/desktop/image-about-hero.jpg"
-        media="(max-width: 90em)"
-      />
-
-      <source
-        srcSet="/src/pages/OurCompany/images/tablet/image-about-hero.jpg"
-        media="(max-width: 48em)"
-      />
-
-      <source
-        srcSet="/src/pages/OurCompany/images/phone/image-about-hero.jpg"
-        media="(max-width: 28.63em)"
-      />
-
-      <img
-        srcSet="/src/pages/OurCompany/images/desktop/image-about-hero.jpg"
-        alt="Boadroom Meeting"
-      />
+      <source srcSet={heroImgDesktop} media="(max-width: 90em)" />
+      <source srcSet={heroImgTablet} media="(max-width: 48em)" />
+      <source srcSet={heroImgPhone} media="(max-width: 28.63em)" />
+      <img srcSet={heroImgDesktop} alt="Boadroom Meeting" />
     </picture>
   );
 };

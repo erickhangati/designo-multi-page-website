@@ -2,6 +2,8 @@ import React from "react";
 
 import Button from "../../../components/UI/Buttons/Button";
 
+import phone from "./hero-phone.png";
+
 import styles from "./Hero.module.scss";
 
 const Hero = () => {
@@ -20,11 +22,8 @@ const Hero = () => {
 
       {/* RENDER HERO IMAGE */}
       <picture className={styles["hero__image"]}>
-        <source
-          srcSet="/src/pages/Home/Hero/hero-phone.png 1x"
-          media="(max-width: 90em)"
-        />
-        <img srcSet="/src/pages/Home/Hero/hero-phone.png" />
+        <source srcSet={phone} media="(max-width: 90em)" />
+        <img srcSet={phone} alt="Phone" />
       </picture>
     </article>
   );

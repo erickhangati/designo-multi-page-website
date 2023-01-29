@@ -1,5 +1,9 @@
 import React from "react";
 
+import worldClassTargetImgDesktop from "../images/desktop/image-world-class-talent.jpg";
+import worldClassTargetImgTablet from "../images/tablet/image-world-class-talent.jpg";
+import worldClassTargetImgPhone from "../images/phone/image-world-class-talent.jpg";
+
 // CARD DETAILS
 export const worldClassTargetText = {
   title: "World-class talent",
@@ -13,25 +17,10 @@ const WorldClassTargetDetails = () => {
   return (
     // CARD IMAGE
     <picture>
-      <source
-        srcSet="/src/pages/OurCompany/images/desktop/image-world-class-talent.jpg"
-        media="(max-width: 90em)"
-      />
-
-      <source
-        srcSet="/src/pages/OurCompany/images/tablet/image-world-class-talent.jpg"
-        media="(max-width: 48em)"
-      />
-
-      <source
-        srcSet="/src/pages/OurCompany/images/tablet/image-world-class-talent.jpg"
-        media="(max-width: 28.63em)"
-      />
-
-      <img
-        srcSet="/src/pages/OurCompany/images/desktop/image-world-class-talent.jpg"
-        alt="Wall Pictures"
-      />
+      <source srcSet={worldClassTargetImgDesktop} media="(max-width: 90em)" />
+      <source srcSet={worldClassTargetImgTablet} media="(max-width: 48em)" />
+      <source srcSet={worldClassTargetImgPhone} media="(max-width: 28.63em)" />
+      <img srcSet={worldClassTargetImgDesktop} alt="Wall Pictures" />
     </picture>
   );
 };

@@ -1,5 +1,9 @@
 import React from "react";
 
+import realDealImgDesktop from "../images/desktop/image-real-deal.jpg";
+import realDealImgTablet from "../images/tablet/image-real-deal.jpg";
+import realDealImgPhone from "../images/phone/image-real-deal.jpg";
+
 // CARD DETAILS
 export const realDealText = {
   title: "The real deal",
@@ -13,25 +17,10 @@ const RealDealDetails = () => {
   return (
     // CARD IMAGE
     <picture>
-      <source
-        srcSet="/src/pages/OurCompany/images/desktop/image-real-deal.jpg"
-        media="(max-width: 90em)"
-      />
-
-      <source
-        srcSet="/src/pages/OurCompany/images/tablet/image-real-deal.jpg"
-        media="(max-width: 48em)"
-      />
-
-      <source
-        srcSet="/src/pages/OurCompany/images/tablet/image-real-deal.jpg"
-        media="(max-width: 28.63em)"
-      />
-
-      <img
-        srcSet="/src/pages/OurCompany/images/desktop/image-real-deal.jpg"
-        alt="Wall Pictures"
-      />
+      <source srcSet={realDealImgDesktop} media="(max-width: 90em)" />
+      <source srcSet={realDealImgTablet} media="(max-width: 48em)" />
+      <source srcSet={realDealImgPhone} media="(max-width: 28.63em)" />
+      <img srcSet={realDealImgDesktop} alt="Wall Pictures" />
     </picture>
   );
 };
