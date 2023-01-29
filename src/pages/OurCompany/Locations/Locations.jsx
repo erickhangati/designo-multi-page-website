@@ -1,6 +1,6 @@
 import React from "react";
 
-import locationDetails from "./LocationsDetails";
+import locationDetails from "./locationsDetails";
 import LocationItem from "./LocationItem/LocationItem";
 
 import styles from "./Locations.module.scss";
